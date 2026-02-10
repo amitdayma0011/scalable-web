@@ -1,0 +1,14 @@
+# Render.com Deployment Configuration
+# This file tells Render how to build and run your backend
+
+# Build Command (run during deployment)
+build: npm install
+
+# Start Command (run to start the server)
+start: npm start
+
+# Environment
+runtime: node
+
+# Health check endpoint
+healthCheckPath: /

@@ -43,7 +43,12 @@ app.use(
         return callback(null, true);
       }
       
-      // In production, check specific origin
+      // Allow GitHub Pages URL
+      if (origin === 'https://amitdayma0011.github.io') {
+        return callback(null, true);
+      }
+      
+      // In production, check specific origin from env
       if (process.env.CLIENT_URL && origin === process.env.CLIENT_URL) {
         return callback(null, true);
       }
